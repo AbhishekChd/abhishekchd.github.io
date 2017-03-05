@@ -178,10 +178,11 @@ h2{
 .portfolio-content{
     box-shadow: 0 -6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
+    line-height: 160%;
 }
 .desc{
     padding:30px 1%;
-    word-spacing: 5px;
+    word-spacing: 4px;
     text-align: justify;
     height: inherit;
     width: 100%;
