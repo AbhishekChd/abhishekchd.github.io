@@ -10,3 +10,7 @@ The website is responsive and can be used by anyone.
 * C# (Used only in Unity3D)
 * HTML5 and CSS3
 * JavaScript
+* SQLite
+* MySQL
+* Ruby
+* Python
