@@ -1,129 +1,207 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84160108-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
-        gtag('config', 'UA-84160108-2');
-    </script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
+<body onload="showData()">
 
-<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand font-weight-bold text-primary" href="#">abhishek chaudhary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <header>
-        <nav class="fixed-nav main-nav">
-            <a href="#" style="padding:0;"><img src="img/logoW.png" class="logo" alt="logo"></a>
-            <ul class="full-nav" id="myTopnav">
-                <a href="javascript:void(0);" class="icon"><span id="menu"><i class="fa fa-bars"></i></span></a>
-                <li id="item-contact"><a href="#">Contact</a></li>
-                <li id="item-project"><a href="#projects">Projects</a></li>
-                <li id="item-portfolio"><a href="#portfolio">Portfolio</a></li>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item pr-5">
+                <b><a class="nav-link" href="#about">About</a></b>
+            </li>
+            <li class="nav-item pr-5">
+                <b><a class="nav-link" href="#skills">Skills</a></b>
+            </li>
+            <li class="nav-item pr-5">
+                <b><a class="nav-link" href="#work">Work</a></b>
+            </li>
+            <li class="nav-item  pr-5">
+                <b><a class="nav-link" href="#projects">Projects</a></b>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-            </ul>
-        </nav>
-        <div class="clear-div"></div>
-        <div class="intro-box">
-            ABHISHEK CHAUDHARY
+
+<div id="hero">
+    <div class="intro_about mt-5">
+        <h1 class="intro_name"><span itemprop="name">Abhisek Chaudhary</span></h1>
+        <h1 class="intro_designation">Software Engineer | AI Enthusiast</h1>
+    </div>
+    <div id="hero-image"></div>
+</div>
+
+<div id="about" class="header container-fluid">
+    <h1 class="text-center text-dark spaced-title">&#128075; I'm Abhishek.<br/> Student and Software Engginner</h1>
+    <div class="mb-3 divider"></div>
+    <div class="row mt-sm-1 mt-md-5">
+        <div class="col-md-6 pr-5 pl-5 pb-2 text-body text-justify" style="font-size: 120%">
+            <p>
+                I recently completed the <a href="https://confirm.udacity.com/3ARLKARZ" target="_blank"><strong>Android
+                Developer Nanodegree</strong></a> from Udacity, completely <strong>sponsored by Google</strong>.
+            </p>
+            <p>
+                Previously I had 2 years of experience in Full Stack Web Development with <b>django</b> and made
+                some
+                cool
+                projects in web along with some <b>competitive programming</b>.
+            </p>
+            <p>
+                All of this started when in my High School I was introduced to <b>Java</b> and my passion to solve
+                real-world problems hasn't stopped.
+                Moreover it grew with concepts like <b>Machine Learning</b> and <b>AI</b> using which I want to
+                solve most trivial and essential tasks we have today!
+            </p>
         </div>
-    </header>
-
-    <main>
-        <!--------- PORTFOLIO SECTION ------------>
-        <div id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="row portfolio-content ">
-                <div class="col-s col-m-7 col-l-8 desc">
-                    <h3>
-                        <i class="fa fa-code fa-lg" style="color:#004B8D;"></i>
-                        <b>Software Engineer</b>
-                        <i class="fa fa-code fa-lg" style="color:#004B8D;"></i>
-                    </h3>
-                    <br> Hello, my name is Abhishek and I'm an India-based freelancer. I'm a Front-end Web Developer and a rookie Game-Developer. Many of my projects are under development and the developed ones are available below. I have a diverse set of skills ranging from <b>Web development</b> (HTML, CSS & JavaScript) to <b>Software development</b> (Java, C/C++ and C#).
+        <div class="col-md-2 offset-2">
+            <div class="btn-group-vertical">
+                <a href="https://github.com/AbhishekChd" target="_blank" class="btn text-dark social-icons mb-2"><i
+                        class="fab fa-github-alt"></i> Github</a>
+                <a href="https://www.linkedin.com/in/abhishek-chd" target="_blank"
+                   class="btn text-dark social-icons mb-2"><i
+                        class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://twitter.com/coder_abhishek" target="_blank"
+                   class="btn text-dark social-icons mb-2"><i class="fab fa-twitter"></i>
+                    Twitter</a>
+                <a href="https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp" target="_blank"
+                   class="btn font-weight-bold social-icons mb-2 btn-primary"><i
+                        class="fas fa-download"></i> Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="skills" class="container-fluid header">
+    <h1 class="text-center text-dark mt-4 mb-2">Skills</h1>
+    <div class="mb-3 divider"></div>
+    <div class="row mt-5">
+        <div class="col-sm-8 offset-sm-2 col-md-3 offset-md-2">
+            <div class="mb-4">
+                <h3>Java</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;"></div>
                 </div>
-                <div class=" col-s col-m-5 col-l-4 social-button-pallete row link-me">
-                    <img src="img/profile-pic.jpg" class="profile-image" alt="My picture">
-                    <div>
-                        <h3>Abhishek Chaudhary</h3>
-                    </div>
+            </div>
+            <div class="mb-4">
+                <h3>Android </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h3>Python </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h3>C++ </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 68%;"></div>
                 </div>
             </div>
         </div>
-        <!---------  PROJECTS SECTION ------------>
-        <div id="projects">
-            <div>
-                <h2>Projects</h2>
+        <div class="col-sm-8 offset-sm-2 col-md-3 offset-md-2">
+            <div class="mb-4">
+                <h3>Javascript</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div>
+                </div>
             </div>
-            <div class="row">
-                <a href="https://codepen.io/ace_Abhishek/full/KMMVmy" target="_blank">
-                    <figure class="col-l-4"><img src="img/1.png" class="project-img">
-                        <div class="center-text">Tribute</div>
-                    </figure>
-                </a>
-                <a href="http://codepen.io/ace_Abhishek/full/OXbyVZ?editors=1010" target="_blank">
-                    <figure class="col-l-4"><img src="img/2.png" class="project-img">
-                        <div class="center-text">Random Quote Machine</div>
-                    </figure>
-                </a>
-                <a href="http://codepen.io/ace_Abhishek/full/kXvxKB" target="_blank">
-                    <figure class="col-l-4"><img src="img/3.png" class="project-img">
-                        <div class="center-text">Weather App</div>
-                    </figure>
-                </a>
+            <div class="mb-4">
+                <h3>SQL </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 85%;"></div>
+                </div>
             </div>
-            <div class="row">
-                <a href="http://codepen.io/ace_Abhishek/full/OXzkGb" target="_blank">
-                    <figure class="col-l-4"><img src="img/4.png" class="project-img">
-                        <div class="center-text">Wikipedia viewer</div>
-                    </figure>
-                </a>
-                <a href="http://codepen.io/ace_Abhishek/full/zBpZvZ" target="_blank">
-                    <figure class="col-l-4"><img src="img/5.png" class="project-img">
-                        <div class="center-text">Twitch Search</div>
-                    </figure>
-                </a>
-                <a href="http://codepen.io/ace_Abhishek/full/bqRRLZ" target="_blank">
-                    <figure class="col-l-4"><img src="img/6.PNG" class="project-img">
-                        <div class="center-text">Pomodoro Clock</div>
-                    </figure>
-                </a>
+            <div class="mb-4">
+                <h3>HTML/CSS </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 85%;"></div>
+                </div>
             </div>
-        </div>
-        <div class="clear-div"></div>
-        <!---------   CONTACT SECTION ------------>
-        <div id="contact"></div>
-    </main>
 
-    <footer>
-        <div class="row connect">
-            <a href="https://www.youtube.com/channel/UCN99466wtH-f_kAKu6wHfuQ" target="_blank"><i class="fa fa-youtube-play fa-2x" style="color:#bb0000;"></i></a>
-            <a href="https://mystikoacestudios.wordpress.com/courses/" target="_blank"><i class="fa fa-wordpress fa-2x" style="color:#21759b;"></i></a>
-            <a href="Public Profilehttps://in.linkedin.com/in/abhishek-chaudhary-a71094115" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#007bb5"></i></a>
-            <a href="https://www.facebook.com/mystikoace" target="_blank"><i class="fa fa-facebook fa-2x" style="color:#3b5998"></i></a>
-            <a href="https://www.quora.com/profile/Abhishek-Chaudhary-46" target="_blank"><i class="fa fa-quora fa-2x" style="color:#a82400"></i></a>
-        </div>
-        <div class="links">
-            <div class="credit">
-                Designed and devloped by <a target="_blank" href="https://www.freecodecamp.com/abhishekchd">Abhishek Chaudhary</a><br>
-                <i class="fa fa-copyright" aria-hidden="true"></i><a href="#intro">Mystiko Studio</a>. All rights reserved
-            </div>
-            <div class="credit-links">
-                <a href="http://codepen.io/ace_Abhishek" target="_blank"><i class="fa fa-codepen fa-2x" style="background-color:#000000;color:#fff;"></i></a>
-                <a href="https://www.freecodecamp.com/abhishekchd" target="_blank"><i class="fa fa-free-code-camp fa-2x" style="background-color:#006400;color:#fff;"></i></a>
-                <a href="https://github.com/AbhishekChd" target="_blank"><i class="fa fa fa-github fa-2x" style="background-color:#000000;color:#fff;"></i></a>
+            <div class="mb-4">
+                <h3>PyTorch </h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary " role="progressbar" style="width: 40%;"></div>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</div>
+<div class="header bg-gradient-dark text-white" id="work">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="heading">
+                    <br>
+                    <h3><b>Work Experience</b></h3>
+                </div>
+            </div><!-- col-sm-4 -->
+            <div class="col-sm-8">
+                <br>
+                <h3><b>Jalopuera</b></h3>
+                <h4 class="text-warning"><b>Associate Android Developer</b></h4>
+                <h5 class="mt-2">SEPTEMBER 2018- DECEMBER 2018</h5>
+                <p>Worked as an Android Developer to develop app for booking parking locations in <b>Pune.</b></p>
+                <ul class="mb-5">
+                    <li>Worked on Google Maps SDK to find and show appropriate Parking Locations around the city.
+                    </li>
+                    <li>Used Special Maps Utilities to cluster close location for usability.</li>
+                    <li>Integrated Image Loading and Network libraries to make app perform much better.</li>
+                </ul>
+            </div><!-- col-sm-8 -->
+        </div><!-- row -->
+    </div>
+</div>
+<div id="projects" class="container-fluid header">
+    <h1 class="text-center text-dark mt-4 mb-2" id="title_">Projects</h1>
+    <div class="mb-3 divider"></div>
+    <div class="row">
+    </div>
+</div>
 
+<footer>
+    <div class="text-center">
+        <h2>Let's Connect!</h2>
+        <div class="social_links">
+            <a class="text-black-50 ml-3 mr-3" href="mailto:acechd97@gmail.com"><i class="fas fa-envelope move"></i></a>
+            <a class="text-black-50 ml-3 mr-3" href="https://www.linkedin.com/in/abhishek-chd" target="_blank"><i
+                    class="fab fa-linkedin-in move"></i></a>
+            <a class="text-black-50 ml-3 mr-3" href="https://github.com/AbhishekChd" target="_blank"><i
+                    class="fab fa-github move"></i></a>
+        </div>
+        <div class="mt-2 h5">
+            &copy; Abhishek Chaudhary. All rights
+            reserved
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>

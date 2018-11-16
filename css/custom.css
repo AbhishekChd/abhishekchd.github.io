@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+body {
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 110% !important;
+}
+
+/************************
+    UTILITIES
+************************/
+.divider {
+    margin: auto;
+    width: 140px;
+    height: 6px;
+    border-radius: 8%;
+    background-color: #fd7e14;
+}
+
+.silent-link {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+div.header {
+    width: 100%;
+    padding-top: 18vh;
+    padding-bottom: 8vh;
+}
+
+.spaced-title {
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+}
+
+/************************
+    HERO SECTION
+************************/
+#hero-image {
+    background: url("../img/header-image.png") no-repeat center center;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 14vmax;
+    padding-bottom: 32vmax;
+    background-size: cover;
+}
+
+/************************
+    ABOUT SECTION
+************************/
+.intro {
+    width: 100%;
+    padding-bottom: 10vh;
+}
+
+.intro_about {
+    width: 100%;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    margin-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_name {
+    width: 100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+    text-align: center !important;
+    color: #383838;
+    font-weight: bolder;
+    font-size: 2.80em;
+    letter-spacing: 2px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center !important;
+}
+
+.intro_designation {
+    width: 100%;
+    text-align: center !important;
+    color: #383838;
+    font-weight: lighter;
+    font-size: 1.28em;
+    letter-spacing: 5px;
+}
+
+.social-icons {
+    font-size: 108%;
+    word-spacing: 0.8em;
+
+}
+
+/************************
+    FOOTER SECTION
+************************/
+.social_links {
+    font-size: 200%;
+}
+
+.move {
+    transition: all 0.1s ease-in-out;
+}
+
+.move:hover {
+    transform: scale(1.15, 1.15);
+}
+
+footer {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    background-color: #e2E2E8
+}
+
+/************************
+    MEDIA SECTION
+************************/
+@media screen and (max-width: 800px) {
+    div.header {
+        width: 100%;
+        padding-top: 8vh;
+        padding-bottom: 4vh;
+    }
+
+    #hero {
+        padding-bottom: 26vh;
+    }
+}
