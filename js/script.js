@@ -63,3 +63,15 @@ function showData() {
     });
     $("#projects>div.row").html(results);
 }
+
+$(() => {
+    const $navbar = $('.navbar');
+    $(window).bind('wheel mousewheel', event => {
+            if (event.originalEvent.deltaY >= 0) {
+                $navbar.fadeOut();
+            } else {
+                $navbar.fadeIn();
+            }
+        }
+    );
+});
