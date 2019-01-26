@@ -34,11 +34,12 @@ const PROJECTS_JSON = {
 function renderBadges(item) {
     return item.category.map(value => {
         return `<span class="badge badge-primary badge-pill mr-2">${value}</span>`;
-    });
+    }).join('');
 }
 
-function renderItem(item) {
-    return `<div class="col-sm-10 col-md-4 col-lg-4 mb-5 offset-sm-1 offset-md-0">
+function renderItem(item, i) {
+    const md_offset = (i + 1) % 2 === 0 ? 0 : 1;
+    return `<div class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-4 mb-5 offset-sm-2 offset-md-${md_offset} offset-lg-0">
             <a target="_blank" class="silent-link" href="${item.link}">
                 <div class="card mb-0" style="cursor: pointer; height: 100%">
                     <div class="card-header">
@@ -46,7 +47,7 @@ function renderItem(item) {
                         <h4 id="badges-holder">${renderBadges(item)}</h4>
                     </div>
                     <div class="flex-row">
-                        <img class="img-fluid d-block m-auto" style="height: 300px" alt="Card image" src="${item.image}">
+                        <img class="img-fluid d-block m-auto project-image" alt="Card image" src="${item.image}">
                     </div>
                     <div class="card-body">
                         <p class="card-text text-justify">${item.description}</p>                                      
@@ -57,8 +58,8 @@ function renderItem(item) {
 }
 
 function showData() {
-    let results = PROJECTS_JSON.projects.map(value => {
-        return renderItem(value)
+    let results = PROJECTS_JSON.projects.map((value, i) => {
+        return renderItem(value, i)
     });
     $("#projects>div.row").html(results);
 }
