@@ -1,16 +1,15 @@
-# abhishekchd.github.io
+# Official Portfolio
 
-A website to showcase my portfolio, which has been created completely by me without using any framework.
-The website is responsive and can be used by anyone.
+[![Maintained](https://img.shields.io/maintenance/yes/2019.svg?style=for-the-badge)](https://abhishekchd.github.io/)
+[![Last Commit](https://img.shields.io/github/last-commit/AbhishekChd/abhishekchd.github.io.svg?style=for-the-badge)](https://img.shields.io/github/last-commit/AbhishekChd/abhishekchd.github.io.svg?style=for-the-badge)
 
-### I have various skills in my pool
-* JAVA
-* C
-* C++
-* C# (Used only in Unity3D)
-* HTML5 and CSS3
-* JavaScript
-* SQLite
-* MySQL
-* Ruby
-* Python
+
+A website to showcase my portfolio, and is completely responsive. I have built it some libraries and some custom code. JavaScript used is following **ES6** conventions. Projects and Skills are loaded from **JSON**, check out code for more details.
+
+### Website is live at [abhishekchd.github.io](https://abhishekchd.github.io/)
+
+
+### Build using
+- jQuery
+- Bootstrap 4
+- FontAwesome
