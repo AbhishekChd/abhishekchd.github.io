@@ -44,7 +44,7 @@ const STATE_JSON = {
                 "github": "https://github.com/AbhishekChd/FreeCodeCampProjects",
                 "website": "https://abhishekchd.github.io/FreeCodeCampProjects/"
             },
-            "image": "img/sudoku.png"
+            "image": "img/fcc-projects.png"
         }
     ],
     skills: [
@@ -123,7 +123,7 @@ function renderItemClick(index) {
                                 <p id="model-text">${item.description}</p>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
-                                <img class="img-fluid" style="max-height: 100vh;"  src="${item.image}" alt="${item.name} cover"/>
+                                <img class="img-fluid img-thumbnail" style="max-height: 100vh;"  src="${item.image}" alt="${item.name} cover"/>
                             </div>
                         </div>
                     </div>
