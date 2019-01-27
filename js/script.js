@@ -1,4 +1,4 @@
-const PROJECTS_JSON = {
+const STATE_JSON = {
     projects: [
         {
             "name": "Deep Learning",
@@ -46,8 +46,33 @@ const PROJECTS_JSON = {
             },
             "image": "img/sudoku.png"
         }
+    ],
+    skills: [
+        {title: 'Java', level: 80},
+        {title: 'Android', level: 90},
+        {title: 'Python', level: 80},
+        {title: 'C++', level: 65},
+        {title: 'JavaScript', level: 80},
+        {title: 'SQL', level: 90},
+        {title: 'HTML/CSS', level: 80},
+        {title: 'PyTorch', level: 55}
+
     ]
 };
+
+function renderSkill(skill, i) {
+    const rotate = 180 + (18 / 5 * (skill.level - 50));
+    return `<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                <div class="skill-wrapper my-3">
+                    <span class="label">${skill.level}%<br><small>${skill.title}</small></span>
+                    <div class="skill-circle">
+                        <div class="left-side half-circle"></div>
+                        <div class="right-side half-circle" style="transform: rotate(${rotate}deg);-webkit-transform: rotate(${rotate});"></div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>`;
+}
 
 function renderProjectLinks(item) {
     let links = '';
@@ -80,7 +105,7 @@ function renderProjects(item, i, dark = true) {
 }
 
 function renderItemClick(index) {
-    const item = PROJECTS_JSON.projects[index];
+    const item = STATE_JSON.projects[index];
     const modal =
         `<div class="modal fade" id="projectModal" tabindex="-1">
             <div class="modal-dialog" role="document">
@@ -120,10 +145,14 @@ function renderBadges(item) {
 
 $(() => {
     // Load Projects
-    const results = PROJECTS_JSON.projects.map((value, i) => {
+    $("#projects-root").html(STATE_JSON.projects.map((value, i) => {
         return renderProjects(value, i)
-    }).join('');
-    $("#projects-root").html(results);
+    }).join(''));
+
+    // Load skills
+    $('.charts-container').html(STATE_JSON.skills.map((value, i) => {
+        return renderSkill(value, i);
+    }).join(''));
 
     // Hide/Show Navbar
     const $navbar = $('.navbar');
@@ -136,7 +165,7 @@ $(() => {
         }
     );
 
-    $('.navbar-collapse a').click(function(){
+    $('.navbar-collapse a').click(function () {
         $(".navbar-collapse").collapse('hide');
     });
 });

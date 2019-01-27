@@ -111,6 +111,65 @@ div.header {
 }
 
 /************************
+    SKILLS SECTION
+************************/
+.charts-container{
+    font-size: 9em;
+}
+.charts-container:after {
+
+}
+
+.skill-wrapper {
+    height: 1em;
+    width: 1em;
+    position: relative;
+}
+
+.skill-wrapper .skill-circle {
+    height: 100%;
+    clip: rect(auto, auto, auto, auto);
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.skill-wrapper .skill-circle .half-circle {
+    height: 100%;
+    width: 100%;
+    border: 0.1em solid #2196F3;
+    border-radius: 50%;
+    clip: rect(0, 0.5em, 1em, 0);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.skill-wrapper .label {
+    font-size: 0.15em;
+    left: 0.4em;
+    position: absolute;
+    right: 0.4em;
+    text-align: center;
+    top: 1.8em;
+    font-weight: bold;
+}
+
+.skill-wrapper .shadow {
+    height: 100%;
+    width: 100%;
+    border: 0.1em solid #bdc3c7;
+    border-radius: 50%;
+}
+
+.skill-wrapper .skill-circle .left-side {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+/************************
     PROJECTS SECTION
 ************************/
 
