@@ -149,8 +149,9 @@ $(() => {
         return renderProjects(value, i)
     }).join(''));
 
-    // Load skills
-    $('.charts-container').html(STATE_JSON.skills.map((value, i) => {
+    // Load skills - increasing level order
+    const sorted_skills = STATE_JSON.skills.sort((a, b) => b.level - a.level);
+    $('.charts-container').html(sorted_skills.map((value, i) => {
         return renderSkill(value, i);
     }).join(''));
 
