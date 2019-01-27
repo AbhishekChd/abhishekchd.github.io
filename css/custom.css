@@ -22,9 +22,9 @@ body {
 }
 
 div.header {
-    width: 100%;
-    padding-top: 18vh;
-    padding-bottom: 8vh;
+    min-height: 100vh;
+    padding-top: 82px; /*Size of Navbar*/
+
 }
 
 .spaced-title {
@@ -181,12 +181,6 @@ footer {
 ************************/
 @media screen and (max-width: 800px) {
     div.header {
-        width: 100%;
-        padding-top: 8vh;
         padding-bottom: 4vh;
-    }
-
-    #hero {
-        padding-bottom: 26vh;
     }
 }
