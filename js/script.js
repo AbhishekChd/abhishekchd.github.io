@@ -60,7 +60,7 @@ const STATE_JSON = {
     ]
 };
 
-function renderSkill(skill, i) {
+function renderSkill(skill) {
     const rotate = 180 + (18 / 5 * (skill.level - 50));
     return `<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <div class="skill-wrapper my-3">
