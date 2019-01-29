@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-
+html{
+    scroll-behavior:smooth;
+}
 body {
     font-family: 'Quicksand', sans-serif !important;
     font-size: 110% !important;
@@ -241,5 +243,6 @@ footer {
 @media screen and (max-width: 800px) {
     div.header {
         padding-bottom: 4vh;
+        padding-top: 300px;
     }
 }
