@@ -155,17 +155,7 @@ $(() => {
         return renderSkill(value, i);
     }).join(''));
 
-    // Hide/Show Navbar
-    const $navbar = $('.navbar');
-    $(window).bind('wheel mousewheel', event => {
-            if (event.originalEvent.deltaY >= 0) {
-                $navbar.fadeOut();
-            } else {
-                $navbar.fadeIn();
-            }
-        }
-    );
-
+    // Collapse Navbar on click
     $('.navbar-collapse a').click(function () {
         $(".navbar-collapse").collapse('hide');
     });
