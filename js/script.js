@@ -159,4 +159,18 @@ $(() => {
     $('.navbar-collapse a').click(function () {
         $(".navbar-collapse").collapse('hide');
     });
+
+
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            $('html').animate({
+                scrollTop: $(this.hash).offset().top - $('nav.navbar').innerHeight()
+            }, 1000);
+        } // End if
+    });
 });

@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-html{
-    scroll-behavior:smooth;
-}
+
 body {
     font-family: 'Quicksand', sans-serif !important;
     font-size: 110% !important;
@@ -25,8 +23,6 @@ body {
 
 div.header {
     min-height: 100vh;
-    padding-top: 89px; /*Size of Navbar*/
-
 }
 
 .spaced-title {
@@ -115,9 +111,10 @@ div.header {
 /************************
     SKILLS SECTION
 ************************/
-.charts-container{
+.charts-container {
     font-size: 9em;
 }
+
 .charts-container:after {
 
 }
@@ -235,14 +232,4 @@ footer {
     padding-top: 12vh;
     padding-bottom: 12vh;
     background-color: #e2E2E8
-}
-
-/************************
-    MEDIA SECTION
-************************/
-@media screen and (max-width: 800px) {
-    div.header {
-        padding-bottom: 4vh;
-        padding-top: 300px;
-    }
 }
