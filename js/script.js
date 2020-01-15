@@ -48,17 +48,65 @@ const STATE_JSON = {
         }
     ],
     skills: [
-        {title: 'Java', level: 80},
-        {title: 'Android', level: 90},
-        {title: 'Python', level: 80},
-        {title: 'C++', level: 65},
-        {title: 'JavaScript', level: 80},
-        {title: 'SQL', level: 90},
-        {title: 'HTML/CSS', level: 80},
-        {title: 'PyTorch', level: 55}
+        { title: 'Java', level: 80 },
+        { title: 'Android', level: 90 },
+        { title: 'Python', level: 80 },
+        { title: 'C++', level: 65 },
+        { title: 'JavaScript', level: 80 },
+        { title: 'SQL', level: 90 },
+        { title: 'HTML/CSS', level: 80 },
+        { title: 'PyTorch', level: 55 }
 
+    ],
+    experiences: [
+        {
+            company: "Crio.do",
+            title: "Student Developer",
+            work_period: "MAY 2019 - JUNE 2019",
+            description: "REST Controller for Restaurant search in <b>Spring</b> utilising Caching(Redis), Multi-Threading, Junit Testing.",
+            responsibilties: [
+                "Built REST Controller for Restaurants search in Spring with MongoDB as database",
+                "Utilized Redis and Multi- Threading to reduce response time",
+                "Deployed the backend to a Google cloud VM Instance using Docker"
+            ]
+        },
+        {
+            company: "Workay",
+            title: "Android Developer",
+            work_period: "FEBRUARY 2019 - MAY 2019",
+            description: "Developing Android app to connect <b>Freelancers</b> and <b>Clients</b> on the go.",
+            responsibilties: [
+                "Designed and developed the architecture for Android Application to make it scalable and secure",
+                "Integrated backend APIs with application to manage projects and freelancers",
+                "Developed responsive and customised User Interface for better user experience"
+            ]
+        },
+        {
+            company: "Jalopuera",
+            title: "Associate Android Developer",
+            work_period: "SEPTEMBER 2018 - JANUARY 2019",
+            description: "Worked as an Android Developer to develop app for booking parking locations in <b>Pune.</b>",
+            responsibilties: [
+                "Worked on Google Maps SDK to find and show appropriate Parking Locations around the city.",
+                "Used Special Maps Utilities to cluster close location for usability.",
+                "Integrated Image Loading and Network libraries to make app perform much better."
+            ]
+        }
     ]
 };
+
+function renderExperience(experience) {
+    return `<br>
+            <h3><b>${experience.company}</b></h3>
+            <h4 class="text-warning"><b>${experience.title}</b></h4>
+            <h5 class="mt-2">${experience.work_period}</h5>
+            <p>${experience.description}</p>
+            <ul class="mb-5">
+                ${experience.responsibilties.map(value => {
+        return `<li>${value}</li>`;
+    }).join('')}
+            </ul>`;
+}
 
 function renderSkill(skill) {
     const rotate = 180 + (18 / 5 * (skill.level - 50));
@@ -144,10 +192,10 @@ function renderBadges(item) {
 }
 
 $(() => {
-    // Load Projects
-    $("#projects-root").html(STATE_JSON.projects.map((value, i) => {
-        return renderProjects(value, i)
-    }).join(''));
+    // Collapse Navbar on click
+    $('.navbar-collapse a').click(function () {
+        $(".navbar-collapse").collapse('hide');
+    });
 
     // Load skills - increasing level order
     const sorted_skills = STATE_JSON.skills.sort((a, b) => b.level - a.level);
@@ -155,11 +203,11 @@ $(() => {
         return renderSkill(value, i);
     }).join(''));
 
-    // Collapse Navbar on click
-    $('.navbar-collapse a').click(function () {
-        $(".navbar-collapse").collapse('hide');
-    });
+    // Load Experience
+    $("#experiences-root").html(STATE_JSON.experiences.map(value => renderExperience(value)).join(''));
 
+    // Load Projects
+    $("#projects-root").html(STATE_JSON.projects.map((value, i) => renderProjects(value, i)).join(''));
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
