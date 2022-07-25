@@ -1,6 +1,6 @@
 # Official Portfolio
 
-[![Maintained](https://img.shields.io/maintenance/yes/2020.svg?style=for-the-badge)](https://abhishekchd.github.io/)
+[![Maintained](https://img.shields.io/maintenance/yes/2022.svg?style=for-the-badge)](https://abhishekchd.github.io/)
 [![Last Commit](https://img.shields.io/github/last-commit/AbhishekChd/abhishekchd.github.io.svg?style=for-the-badge)](https://img.shields.io/github/last-commit/AbhishekChd/abhishekchd.github.io.svg?style=for-the-badge)
 
 
