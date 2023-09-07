@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  --color-primary: #6861b8;
+  --color-text: #101010;
+  --color-text-muted: #767676;
+  --color-background: #faf9f6;
+  --color-switch: var(--color-text-muted);
+}
+
+body.dark {
+  --color-primary: #6861b8;
+  --color-text: #ffffff;
+  --color-text-muted: #bbbbbb;
+  --color-background: #222831;
+  --color-switch: var(--color-primary);
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.switch-background {
+  background-color: var(--color-switch);
+}

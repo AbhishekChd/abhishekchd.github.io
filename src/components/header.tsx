@@ -1,34 +1,45 @@
 import React from "react";
 import { Switch } from "@headlessui/react";
-import { useState } from "react";
 import * as Icon from "react-feather";
 
 const Header = () => {
-  const [enabled, setEnabled] = useState(false);
+  const [isDark, setIsDark] = React.useState(isDefaultThemeDark());
+  const lightColor = !isDark
+    ? "var(--color-primary)"
+    : "var(--color-text-muted)";
+  const darkColor = isDark ? "var(--color-primary)" : "var(--color-text-muted)";
+
+  React.useEffect(() => {
+    if (isDark) {
+      document.body.classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      window.localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
 
   return (
     <>
-      <nav className="flex h-16 justify-end">
+      <nav className="flex h-16 justify-end mt-3">
         <div className="flex self-center mx-6 sm:mx-6 lg:mx-10 align-middle">
           <div className="mx-4">
-            <Icon.Moon size={24} color="gray" fill="gray" />
+            <Icon.Sun size={29} color={lightColor} fill={lightColor} />
           </div>
           <Switch
-            checked={enabled}
-            onChange={setEnabled}
-            className={`${
-              enabled ? "bg-blue-600" : "bg-gray-200"
-            } relative inline-flex h-6 w-11 items-center rounded-full`}
+            checked={isDark}
+            onChange={setIsDark}
+            className={`relative inline-flex h-8 w-14 items-center rounded-full switch-background`}
           >
-            <span className="sr-only">Enable notifications</span>
+            <span className="sr-only">Switch page theme</span>
             <span
               className={`${
-                enabled ? "translate-x-6" : "translate-x-1"
-              } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                isDark ? "translate-x-8" : "translate-x-1"
+              } inline-block h-5 w-5 transform rounded-full bg-white transition`}
             />
           </Switch>
           <div className="mx-4">
-            <Icon.Sun size={24} color="gray" fill="gray" />
+            <Icon.Moon size={29} color={darkColor} fill={darkColor} />
           </div>
         </div>
       </nav>
@@ -37,3 +48,8 @@ const Header = () => {
 };
 
 export default Header;
+
+function isDefaultThemeDark(): boolean {
+  const savedTheme = window.localStorage.getItem("theme");
+  return savedTheme ? savedTheme == "dark" : true;
+}
