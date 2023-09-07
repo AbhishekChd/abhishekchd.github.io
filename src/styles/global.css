@@ -21,8 +21,54 @@ body.dark {
 body {
   color: var(--color-text);
   background-color: var(--color-background);
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
 }
 
 .switch-background {
   background-color: var(--color-switch);
+}
+
+h1 {
+  font-size: theme(fontSize.5xl);
+  @media (min-width: theme("screens.md")) {
+    font-size: theme(fontSize.6xl);
+  }
+  @media (min-width: theme("screens.lg")) {
+    font-size: theme(fontSize.7xl);
+  }
+}
+
+h2 {
+  font-size: theme(fontSize.4xl);
+  @media (min-width: theme("screens.md")) {
+    font-size: theme(fontSize.5xl);
+  }
+  @media (min-width: theme("screens.lg")) {
+    font-size: theme(fontSize.6xl);
+  }
+}
+
+h3 {
+  font-size: theme(fontSize.xl);
+  @media (min-width: theme("screens.md")) {
+    font-size: theme(fontSize.2xl);
+  }
+  @media (min-width: theme("screens.lg")) {
+    font-size: theme(fontSize.3xl);
+  }
+}
+
+h4 {
+  font-size: theme(fontSize.base);
+  @media (min-width: theme("screens.md")) {
+    font-size: theme(fontSize.lg);
+  }
+  @media (min-width: theme("screens.lg")) {
+    font-size: theme(fontSize.xl);
+  }
+}
+
+section {
+  min-height: calc(100vh - 70px);
+  padding: theme("spacing.4");
 }
