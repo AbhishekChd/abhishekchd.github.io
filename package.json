@@ -19,6 +19,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "autoprefixer": "^10.4.15",
+    "blob-animated": "^1.2.9",
+    "blobs": "^2.3.0-beta.2",
     "gatsby": "^5.12.3",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.12.0",

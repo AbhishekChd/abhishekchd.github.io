@@ -20,21 +20,30 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
       __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "assets",
+        path: `${__dirname}/src/assets/`,
+      },
+      __key: "assets",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages/`,
       },
       __key: "pages",
     },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
+        mode: "async",
         enableListener: true,
         preconnect: [
           `https://fonts.googleapis.com`,
@@ -43,7 +52,7 @@ const config: GatsbyConfig = {
         web: [
           {
             name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
+            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;500;600;700&display=swap`,
           },
         ],
       },
