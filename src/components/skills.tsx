@@ -33,10 +33,9 @@ const Skills = () => {
       <div className="flex gap-6 flex-wrap">
         {Array.from(languages).map((key, value) => {
           const language = key[1];
-          console.log(language);
           if (!language.path) return;
           return (
-            <span className="text-center">
+            <span className="text-center" key={value}>
               <img className="inline" src={language.path} />
               <br />
               {language.title}
@@ -49,10 +48,9 @@ const Skills = () => {
       <div className="flex gap-6 flex-wrap">
         {Array.from(tools).map((key, value) => {
           const tool = key[1];
-          console.log(tool);
           if (!tool.path) return;
           return (
-            <span className="text-center">
+            <span className="text-center" key={value}>
               <img className="inline" src={tool.path} />
               <br />
               {tool.title}
