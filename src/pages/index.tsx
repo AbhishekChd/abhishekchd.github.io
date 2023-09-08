@@ -3,14 +3,15 @@ import { type HeadFC, type PageProps } from "gatsby";
 import Header from "../components/header";
 import Hero from "../components/hero";
 import AboutMe from "../components/about-me";
-
+import Work from "../components/work";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
       <Hero />
-      <AboutMe/>
+      <AboutMe />
+      <Work />
     </>
   );
 };

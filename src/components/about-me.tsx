@@ -30,7 +30,7 @@ const AboutMe = () => {
   return (
     <>
       <section className="flex flex-col">
-        <h3 className="pb-6">📌 A little about me</h3>
+        <h2 className="pb-6">📌 A little about me</h2>
         <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
           <div className="m-auto max-w-[400px] md:max-w-prose">
             <canvas id="canvasExample" ref={reference} />

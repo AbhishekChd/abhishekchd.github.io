@@ -1,4 +1,4 @@
-As a **Software Engineer** I love to build **scalable** solutions to ambiguous and challenging problems. I have **3 years of SDE Experience** where my last stint was @Amazon where we designed and launched multiple features!
+As a **Software Engineer** I love to build **scalable** solutions to ambiguous and challenging problems. I have **3 years of professional SDE Experience** where my last stint was @Amazon where we designed and launched multiple features!
 
 <br/>
 

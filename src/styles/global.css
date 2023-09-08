@@ -8,6 +8,7 @@ body {
   --color-text-muted: #767676;
   --color-background: #faf9f6;
   --color-switch: var(--color-text-muted);
+  --li-marker: url("../assets/list-arrow.svg");
 }
 
 body.dark {
@@ -16,6 +17,7 @@ body.dark {
   --color-text-muted: #bbbbbb;
   --color-background: #222831;
   --color-switch: var(--color-primary);
+  --li-marker: url("../assets/list-arrow-dark.svg");
 }
 
 body {
@@ -54,10 +56,10 @@ h1 {
 h2 {
   font-size: theme(fontSize.3xl);
   @media (min-width: theme("screens.md")) {
-    font-size: theme(fontSize.5xl);
+    font-size: theme(fontSize.4xl);
   }
   @media (min-width: theme("screens.lg")) {
-    font-size: theme(fontSize.6xl);
+    font-size: theme(fontSize.5xl);
   }
 }
 
@@ -102,4 +104,28 @@ b {
 canvas {
   width: 100%;
   height: 100%;
+}
+
+li {
+  margin-left: theme(margin.4);
+}
+li::marker {
+  content: var(--li-marker);
+}
+
+#job-section a {
+  text-decoration: underline;
+  color: var(--color-text);
+  @apply transition-all duration-150 ease-in-out underline underline-offset-4;
+}
+
+#job-section a:hover {
+  @apply underline-offset-[6px];
+}
+
+.work-date {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 110%;
 }
