@@ -62,7 +62,7 @@ h2 {
 }
 
 h3 {
-  font-size: theme(fontSize.xl);
+  font-size: theme(fontSize.2xl);
   @media (min-width: theme("screens.md")) {
     font-size: theme(fontSize.2xl);
   }
@@ -83,7 +83,15 @@ h4 {
 
 section {
   min-height: calc(100vh - 55px);
-  margin: theme(spacing.8);
+
+  margin: theme(spacing.3);
+  @media (min-width: theme("screens.md")) {
+    margin: theme(spacing.6);
+  }
+  @media (min-width: theme("screens.md")) {
+    margin: theme(spacing.8);
+  }
+
   padding: theme("spacing.4");
 }
 

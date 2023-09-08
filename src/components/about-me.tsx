@@ -25,37 +25,28 @@ const AboutMe = () => {
     }
   }, []);
 
-  const imageQueryResult = useStaticQuery(imageQuery);
+  const queryResult = useStaticQuery(query);
 
   return (
     <>
       <section className="flex flex-col">
         <h3 className="pb-6">📌 A little about me</h3>
-        <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="m-auto">
+        <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          <div className="m-auto max-w-[400px] md:max-w-prose">
             <canvas id="canvasExample" ref={reference} />
             <img
               className="hidden"
               id="imgExample"
-              src={imageQueryResult.file.childImageSharp.original.src}
+              src={queryResult.file.childImageSharp.original.src}
             />
           </div>
 
           <div className="m-auto">
-            <p>
-              As a <b>Software Engineer</b> I love to build scalable solutions
-              to ambiguous and challenging problems. I have 3 years of SDE
-              Experience where my last stint was @Amazon where we designed and
-              launched multiple features!
-              <br />
-              <br />I began my journey as a developer more than 7 years ago and
-              still look out to learn new tech with same curiosity and build
-              some awesome UI/UX!
-              <br />
-              <br />
-              Here are some of my skills ⚡️
-            </p>
-
+            <span
+              dangerouslySetInnerHTML={{
+                __html: queryResult.markdownRemark.html,
+              }}
+            />
             <Skills />
           </div>
         </div>
@@ -66,8 +57,8 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-const imageQuery = graphql`
-  query ProfileImage {
+const query = graphql`
+  query ImageAndIntroductionQuery {
     file(relativePath: { eq: "header_personal_profile.jpeg" }) {
       childImageSharp {
         gatsbyImageData(width: 400, placeholder: DOMINANT_COLOR, quality: 0)
@@ -75,6 +66,9 @@ const imageQuery = graphql`
           src
         }
       }
+    }
+    markdownRemark(fileAbsolutePath: { regex: "/introduction.md/" }) {
+      html
     }
   }
 `;

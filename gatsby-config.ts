@@ -41,6 +41,14 @@ const config: GatsbyConfig = {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/src/data/`,
+      },
+      __key: "data",
+    },
+    {
       resolve: `gatsby-omni-font-loader`,
       options: {
         mode: "async",

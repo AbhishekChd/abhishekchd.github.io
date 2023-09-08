@@ -36,7 +36,7 @@ const Skills = () => {
           if (!language.path) return;
           return (
             <span className="text-center" key={value}>
-              <img className="inline" src={language.path} />
+              <img className="inline rounded" src={language.path} />
               <br />
               {language.title}
             </span>
@@ -51,7 +51,7 @@ const Skills = () => {
           if (!tool.path) return;
           return (
             <span className="text-center" key={value}>
-              <img className="inline" src={tool.path} />
+              <img className="inline rounded" src={tool.path} />
               <br />
               {tool.title}
             </span>
