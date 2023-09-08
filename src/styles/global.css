@@ -42,7 +42,7 @@ title {
 }
 
 h1 {
-  font-size: theme(fontSize.5xl);
+  font-size: theme(fontSize.4xl);
   @media (min-width: theme("screens.md")) {
     font-size: theme(fontSize.6xl);
   }
@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-  font-size: theme(fontSize.4xl);
+  font-size: theme(fontSize.3xl);
   @media (min-width: theme("screens.md")) {
     font-size: theme(fontSize.5xl);
   }
@@ -62,7 +62,7 @@ h2 {
 }
 
 h3 {
-  font-size: theme(fontSize.2xl);
+  font-size: theme(fontSize.xl);
   @media (min-width: theme("screens.md")) {
     font-size: theme(fontSize.2xl);
   }
@@ -84,9 +84,9 @@ h4 {
 section {
   min-height: calc(100vh - 55px);
 
-  margin: theme(spacing.3);
+  margin: theme(spacing.1);
   @media (min-width: theme("screens.md")) {
-    margin: theme(spacing.6);
+    margin: theme(spacing.4);
   }
   @media (min-width: theme("screens.md")) {
     margin: theme(spacing.8);

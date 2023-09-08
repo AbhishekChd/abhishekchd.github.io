@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <>
       <nav className="flex h-16 justify-end mt-3">
-        <div className="flex self-center mx-6 sm:mx-6 lg:mx-10 align-middle">
+        <div className="flex self-center mx-2 sm:mx-4 lg:mx-10 align-middle">
           <div className="mx-4">
             <Icon.Sun size={29} color={lightColor} fill={lightColor} />
           </div>

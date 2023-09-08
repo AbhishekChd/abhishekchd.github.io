@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="mx-5 md:mx-12 lg:mx-24 flex flex-col justify-around">
+      <section className="mx-2 md:mx-12 lg:mx-24 flex flex-col justify-around">
         <h1>
           Hello! 👋
           <br />
