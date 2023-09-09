@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, PageProps } from "gatsby";
+import { HeadFC, Link, PageProps } from "gatsby";
 import { SEO } from "../components/seo";
 
 const NotFoundPage: React.FC<PageProps> = () => {
@@ -11,7 +11,10 @@ const NotFoundPage: React.FC<PageProps> = () => {
           Page not found
         </h2>
         <p className="mt-4 text-base leading-7 text-gray-600">
-          Sorry, we couldn’t find the page you’re looking for
+          Sorry, we couldn’t find that. Go to{" "}
+          <Link to="/" className="social-link">
+            Home Page.
+          </Link>
         </p>
       </div>
     </section>
