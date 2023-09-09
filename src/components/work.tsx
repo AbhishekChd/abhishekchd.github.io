@@ -45,7 +45,7 @@ export default Work;
 const query = graphql`
 query WorkData {
   allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/work/.*\\.md/"}}
+    filter: {fileAbsolutePath: {regex: "/work/.*\\.md/"}, frontmatter: {show: {ne: false}}}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {

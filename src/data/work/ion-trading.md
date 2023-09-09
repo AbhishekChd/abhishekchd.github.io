@@ -5,6 +5,7 @@ start: "Aug 2020"
 end: "Nov 2020"
 location: New Delhi, India
 date: "2020-08-01T00:00:00.000Z"
+show: true
 ---
 
 - Designed **CI/CD scripts for automating** the package builds, caching, and deployment on valid package changes.

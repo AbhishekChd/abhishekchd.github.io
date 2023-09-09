@@ -5,6 +5,7 @@ start: "Dec 2020"
 end: "Mar 2023"
 location: Bengaluru, India
 date: "2020-12-07T00:00:00.000Z"
+show: true
 ---
 
 - Designed and developed a new feature for Global Returns to **optimally operate regional inventories** after returns with cost savings of **$1M per month**.
