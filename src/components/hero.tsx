@@ -22,7 +22,7 @@ const Hero = (data: Socials) => {
             Get in touch 👉 <span className="m-3"></span>
             <span className="hero-email-link">
               <a href={data.email.url} target="_blank">
-                {data.email.title}
+                {data.email.username}
               </a>
             </span>
           </h3>

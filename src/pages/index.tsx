@@ -43,7 +43,7 @@ export type Socials = {
   email: SocialData;
   resume: SocialData;
 };
-export type SocialData = { title: string; usernasme: string; url: string };
+export type SocialData = { title: string; username: string; url: string };
 
 const query = graphql`
   query SiteMetadata {
