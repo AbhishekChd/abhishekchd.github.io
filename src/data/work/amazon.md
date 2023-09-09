@@ -3,6 +3,7 @@ title: "Software Development Engineer"
 company: "Amazon"
 start: "Dec 2020"
 end: "Mar 2023"
+location: Bengaluru, India
 date: "2020-12-07T00:00:00.000Z"
 ---
 
