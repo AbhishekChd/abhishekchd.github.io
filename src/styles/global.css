@@ -9,6 +9,8 @@ body {
   --color-background: #faf9f6;
   --color-switch: var(--color-text-muted);
   --li-marker: url("../assets/list-arrow.svg");
+  --footer: #f0ebdd;
+  --footer-text: #101010;
 }
 
 body.dark {
@@ -138,6 +140,34 @@ h5 > span > a {
   color: var(--color-text-muted);
 }
 
+footer {
+  background-color: var(--footer);
+  color: var(--footer-text);
+}
+
+footer .headline {
+  font-weight: bold;
+  font-size: theme(fontSize.sm);
+  @media (min-width: theme("screens.md")) {
+    font-size: theme(fontSize.base);
+  }
+  @media (min-width: theme("screens.lg")) {
+    font-size: theme(fontSize.lg);
+  }
+}
+
+.header-accent {
+  color: var(--color-primary);
+}
+
+.social-link {
+  @apply transition-all duration-150 ease-in-out underline underline-offset-8 hover:underline-offset-[14px];
+}
+
+.hero-email-link {
+  @apply transition-all duration-150 ease-in-out underline underline-offset-8 hover:underline-offset-[16px] decoration-8 decoration-[var(--color-primary)];
+}
+
 .work-date {
   color: var(--color-primary);
   font-weight: bold;
@@ -147,4 +177,8 @@ h5 > span > a {
   @media (min-width: theme("screens.lg")) {
     font-size: 110%;
   }
+}
+
+.social-icon {
+  width: 80%;
 }

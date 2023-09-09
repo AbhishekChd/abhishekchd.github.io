@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import AboutMe from "../components/about-me";
 import Work from "../components/work";
+import Footer from "../components/footer";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -12,6 +13,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
       <AboutMe />
       <Work />
+      <Footer/>
     </>
   );
 };
