@@ -6,6 +6,7 @@ end: "May 2019"
 location: New Delhi, India
 date: "2019-02-01T00:00:00.000Z"
 show: true
+type: work
 ---
 
 - Designed and developed **Repository Pattern** and **MVVM** based architecture for Android Application to make it **scalable and secure**.

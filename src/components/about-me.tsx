@@ -67,7 +67,7 @@ const query = graphql`
         }
       }
     }
-    markdownRemark(fileAbsolutePath: { regex: "/introduction.md/" }) {
+    markdownRemark(frontmatter: { type: { eq: "introduction" } }) {
       html
     }
   }
