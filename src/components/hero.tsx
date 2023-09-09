@@ -45,7 +45,11 @@ const Hero = () => {
               url="https://www.linkedin.com/in/abhishek-chd/"
               linkClasses="flex gap-3"
               icon={
-                <Icon.Linkedin fill={"var(--color-text)"} color="transparent" />
+                <Icon.Linkedin
+                  fill={"var(--color-text)"}
+                  color="transparent"
+                  className="social-icon"
+                />
               }
               iconSpanClasses="mt-1"
             />
@@ -56,7 +60,7 @@ const Hero = () => {
               title="Resume"
               url="https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp"
               linkClasses="flex gap-3"
-              icon={<Icon.DownloadCloud />}
+              icon={<Icon.DownloadCloud className="social-icon" />}
               iconSpanClasses="mt-2"
             />
           </h4>

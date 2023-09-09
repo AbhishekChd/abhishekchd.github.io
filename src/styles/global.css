@@ -180,5 +180,10 @@ footer .headline {
 }
 
 .social-icon {
-  width: 80%;
+  display: none;
+  width: 0%;
+  @media (min-width: theme("screens.md")) {
+    display: inline;
+    width: 80%;
+  }
 }
