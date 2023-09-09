@@ -5,7 +5,8 @@ const config: GatsbyConfig = {
     title: `Portfolio | Abhishek Chaudhary`,
     description:
       "Software Development Enginner Portfolio craeted by Abhishek Chaudhary",
-    siteUrl: `https://abhishekchaudhary.dev/`,
+    siteUrl: `https://abhishekchaudhary.dev`,
+    twitterUsername: `@coder_abhishek`,
     image: "./images/icon.png",
     author: `@abhishekchd`,
     socials: {
@@ -58,6 +59,12 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
