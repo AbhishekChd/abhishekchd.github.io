@@ -9,13 +9,15 @@ const Header = () => {
     : "var(--color-text-muted)";
   const darkColor = isDark ? "var(--color-primary)" : "var(--color-text-muted)";
 
+  const windowGlobal = typeof window !== "undefined" && window;
+
   React.useEffect(() => {
     if (isDark) {
       document.body.classList.add("dark");
-      window.localStorage.setItem("theme", "dark");
+      (windowGlobal as Window).localStorage.setItem("theme", "dark");
     } else {
       document.body.classList.remove("dark");
-      window.localStorage.setItem("theme", "light");
+      (windowGlobal as Window).localStorage.setItem("theme", "light");
     }
   }, [isDark]);
 
@@ -50,6 +52,9 @@ const Header = () => {
 export default Header;
 
 function isDefaultThemeDark(): boolean {
-  const savedTheme = window.localStorage.getItem("theme");
+  const windowGlobalLocal = typeof window !== "undefined" && window;
+  const savedTheme = (windowGlobalLocal as Window)?.localStorage?.getItem(
+    "theme"
+  );
   return savedTheme ? savedTheme == "dark" : true;
 }

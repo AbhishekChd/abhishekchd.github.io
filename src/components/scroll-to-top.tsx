@@ -2,18 +2,23 @@ import React from "react";
 
 const ScrollToTop = () => {
   const [show, setShow] = React.useState(false);
+  const windowGlobal = typeof window !== "undefined" && window;
 
   const handleScroll = () => {
-    setShow(window.scrollY > window.outerHeight / 2);
+    setShow(
+      (windowGlobal as Window).scrollY >
+        (windowGlobal as Window).outerHeight / 2
+    );
   };
 
   React.useEffect(() => {
-    window.addEventListener(`scroll`, handleScroll);
-    return () => window.removeEventListener(`scroll`, handleScroll);
+    (windowGlobal as Window).addEventListener(`scroll`, handleScroll);
+    return () =>
+      (windowGlobal as Window).removeEventListener(`scroll`, handleScroll);
   });
 
   const scrollUp = () => {
-    window[`scrollTo`]({ top: 0, behavior: `smooth` });
+    (windowGlobal as Window)[`scrollTo`]({ top: 0, behavior: `smooth` });
   };
 
   return (
