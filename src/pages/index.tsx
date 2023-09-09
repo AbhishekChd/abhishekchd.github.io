@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import AboutMe from "../components/about-me";
 import Work from "../components/work";
 import Footer from "../components/footer";
+import ScrollToTop from "../components/scroll-to-top";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -13,7 +14,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
       <AboutMe />
       <Work />
-      <Footer/>
+      <Footer />
+      <ScrollToTop />
     </>
   );
 };

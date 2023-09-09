@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import { Icon, GitHub } from "react-feather";
 
 const SocialLink = (data: SocialLinkData) => {
   const hasIcon: boolean = data.icon != undefined;
