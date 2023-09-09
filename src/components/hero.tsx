@@ -1,8 +1,9 @@
 import React from "react";
 import * as Icon from "react-feather";
 import SocialLink from "./social-link";
+import { Socials } from "../pages";
 
-const Hero = () => {
+const Hero = (data: Socials) => {
   return (
     <>
       <section className="mx-2 md:mx-12 lg:mx-24 flex flex-col justify-around">
@@ -20,19 +21,16 @@ const Hero = () => {
           <h3>
             Get in touch 👉 <span className="m-3"></span>
             <span className="hero-email-link">
-              <a
-                href="mailto:abhishek.chaudhary.in@gmail.com?subject=Connect from Portfolio!"
-                target="_blank"
-              >
-                abhishek.chaudhary.in@gmail.com
+              <a href={data.email.url} target="_blank">
+                {data.email.title}
               </a>
             </span>
           </h3>
 
           <h4 className="py-8 flex items-center">
             <SocialLink
-              title="GitHub"
-              url="https://github.com/AbhishekChd"
+              title={data.github.title}
+              url={data.github.url}
               linkClasses="flex gap-3"
               icon={<Icon.GitHub className="social-icon" />}
               iconSpanClasses="mt-2"
@@ -41,8 +39,8 @@ const Hero = () => {
             <span className="m-3">/</span>
 
             <SocialLink
-              title="LinkedIn"
-              url="https://www.linkedin.com/in/abhishek-chd/"
+              title={data.linkedin.title}
+              url={data.linkedin.url}
               linkClasses="flex gap-3"
               icon={
                 <Icon.Linkedin
@@ -56,8 +54,8 @@ const Hero = () => {
             <span className="m-3">/</span>
 
             <SocialLink
-              title="Resume"
-              url="https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp"
+              title={data.resume.title}
+              url={data.resume.url}
               linkClasses="flex gap-3"
               icon={<Icon.DownloadCloud className="social-icon" />}
               iconSpanClasses="mt-2"

@@ -1,8 +1,9 @@
 import React from "react";
 import SocialLink from "./social-link";
 import * as Icon from "react-feather";
+import { Socials } from "../pages";
 
-const Footer = () => {
+const Footer = (data: Socials) => {
   return (
     <>
       <footer className="min-w-full flex justify-between items-center flex-col lg:flex-row">
@@ -11,8 +12,8 @@ const Footer = () => {
         </div>
         <div className="m-12 headline flex items-center">
           <SocialLink
-            title="GitHub"
-            url="https://github.com/AbhishekChd"
+            title={data.github.title}
+            url={data.github.url}
             linkClasses="flex gap-1"
             icon={<Icon.GitHub className="social-icon" />}
             iconSpanClasses="mt-1"
@@ -21,8 +22,8 @@ const Footer = () => {
           <span className="m-3">/</span>
 
           <SocialLink
-            title="LinkedIn"
-            url="https://www.linkedin.com/in/abhishek-chd/"
+            title={data.linkedin.title}
+            url={data.linkedin.url}
             linkClasses="flex gap-1"
             icon={
               <Icon.Linkedin
@@ -46,8 +47,8 @@ const Footer = () => {
           <span className="m-3">/</span>
 
           <SocialLink
-            title="Email"
-            url="mailto:abhishek.chaudhary.in@gmail.com?subject=Connect from Portfolio!"
+            title={data.email.title}
+            url={data.email.url}
             linkClasses="flex gap-1"
             icon={<Icon.Mail className="social-icon" />}
             iconSpanClasses="mt-1"

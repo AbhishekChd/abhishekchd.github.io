@@ -13,7 +13,7 @@ const Work = () => {
         <div className="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-12 md:gap-x-1 lg:gap-x-8">
           {jobs.map((job: Job) => {
             return (
-              <>
+              <React.Fragment key={job.id}>
                 <div className="work-date md:col-span-2 lg:col-span-3 text-start md:text-center lg:text-right mt-2 lg:mt-3">
                   {job.frontmatter.start} - {job.frontmatter.end}
                 </div>
@@ -31,7 +31,7 @@ const Work = () => {
                   </h5>
                   <span dangerouslySetInnerHTML={{ __html: job.html }} />
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

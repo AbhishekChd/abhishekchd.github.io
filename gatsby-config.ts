@@ -3,7 +3,35 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Portfolio | Abhishek Chaudhary`,
+    description:
+      "Software Development Enginner Portfolio craeted by Abhishek Chaudhary",
     siteUrl: `https://abhishekchaudhary.dev/`,
+    image: "./images/icon.png",
+    author: `@abhishekchd`,
+    socials: {
+      github: {
+        title: "GitHub",
+        username: "AbhishekChd",
+        url: "https://github.com/AbhishekChd",
+      },
+      linkedin: {
+        title: "LinkedIn",
+        username: "abhishek-chd",
+        url: "https://www.linkedin.com/in/abhishek-chd/",
+      },
+      email: {
+        title: "Email",
+        username: "abhishek.chaudhary.in@gmail.com",
+        url:
+          "mailto:abhishek.chaudhary.in@gmail.com?subject=Connect from Portfolio!",
+      },
+      resume: {
+        title: "Resume",
+        username: "Resume",
+        url:
+          "https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp",
+      },
+    },
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -20,9 +48,9 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-default-html-attrs`,
             options: {
-              "a" : {
+              a: {
                 target: "_blank",
-              }
+              },
             },
           },
         ],
