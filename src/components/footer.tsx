@@ -31,7 +31,6 @@ const Footer = () => {
                 className="social-icon"
               />
             }
-            iconSpanClasses="mt-1"
           />
 
           <span className="m-3">/</span>
