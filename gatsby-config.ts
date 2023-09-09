@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
       "Software Development Enginner Portfolio craeted by Abhishek Chaudhary",
     siteUrl: `https://abhishekchaudhary.dev`,
     twitterUsername: `@coder_abhishek`,
-    image: "./images/icon.png",
+    image: "/images/icon.png",
     author: `@abhishekchd`,
     socials: {
       github: {
@@ -23,14 +23,12 @@ const config: GatsbyConfig = {
       email: {
         title: "Email",
         username: "abhishek.chaudhary.in@gmail.com",
-        url:
-          "mailto:abhishek.chaudhary.in@gmail.com?subject=Connect from Portfolio!",
+        url: "mailto:abhishek.chaudhary.in@gmail.com?subject=Connect from Portfolio!",
       },
       resume: {
         title: "Resume",
         username: "Resume",
-        url:
-          "https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp",
+        url: "https://drive.google.com/open?id=1F1TUqgsMxODNsPw83IuSw-DAvnNAHXCp",
       },
     },
   },
@@ -60,9 +58,9 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/images/icon.png',
+        icon: "src/images/icon.png",
       },
     },
     {

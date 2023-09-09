@@ -6,6 +6,7 @@ import AboutMe from "../components/about-me";
 import Work from "../components/work";
 import Footer from "../components/footer";
 import ScrollToTop from "../components/scroll-to-top";
+import { SEO } from "../components/seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   const queryResult = useStaticQuery(query);
@@ -35,7 +36,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Portfolio | Abhishek Chaudhary</title>;
+export const Head: HeadFC = () => <SEO />;
 
 export type Socials = {
   github: SocialData;
