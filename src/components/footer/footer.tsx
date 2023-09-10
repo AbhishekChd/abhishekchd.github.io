@@ -16,7 +16,6 @@ const Footer = (data: Socials) => {
             url={data.github.url}
             linkClasses="flex gap-1"
             icon={<Icon.GitHub className="social-icon" />}
-            iconSpanClasses="mt-1"
           />
 
           <span className="m-3">/</span>
@@ -41,7 +40,6 @@ const Footer = (data: Socials) => {
             url="https://medium.com/@abhishekchd"
             linkClasses="flex gap-1"
             icon={<Icon.Rss className="social-icon" />}
-            iconSpanClasses="mt-1 "
           />
 
           <span className="m-3">/</span>
@@ -51,7 +49,6 @@ const Footer = (data: Socials) => {
             url={data.email.url}
             linkClasses="flex gap-1"
             icon={<Icon.Mail className="social-icon" />}
-            iconSpanClasses="mt-1"
           />
         </div>
       </footer>

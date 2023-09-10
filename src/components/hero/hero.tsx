@@ -31,9 +31,8 @@ const Hero = (data: Socials) => {
             <SocialLink
               title={data.github.title}
               url={data.github.url}
-              linkClasses="flex gap-3"
+              linkClasses="flex gap-1"
               icon={<Icon.GitHub className="social-icon" />}
-              iconSpanClasses="mt-2"
             />
 
             <span className="m-3">/</span>
@@ -41,7 +40,7 @@ const Hero = (data: Socials) => {
             <SocialLink
               title={data.linkedin.title}
               url={data.linkedin.url}
-              linkClasses="flex gap-3"
+              linkClasses="flex gap-1"
               icon={
                 <Icon.Linkedin
                   fill={"var(--color-text)"}
@@ -56,9 +55,8 @@ const Hero = (data: Socials) => {
             <SocialLink
               title={data.resume.title}
               url={data.resume.url}
-              linkClasses="flex gap-3"
+              linkClasses="flex gap-1"
               icon={<Icon.DownloadCloud className="social-icon" />}
-              iconSpanClasses="mt-2"
             />
           </h4>
         </div>
