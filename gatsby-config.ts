@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
       "Software Development Enginner Portfolio craeted by Abhishek Chaudhary",
     siteUrl: `https://abhishekchaudhary.dev`,
     twitterUsername: `@coder_abhishek`,
-    image: "/images/icon.png",
+    image: "src/images/icon.png",
     author: `@abhishekchd`,
     socials: {
       github: {
