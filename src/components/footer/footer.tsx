@@ -1,7 +1,7 @@
 import React from "react";
-import SocialLink from "./social-link";
+import { SocialLink } from "../components";
 import * as Icon from "react-feather";
-import { Socials } from "../pages";
+import { Socials } from "../../pages";
 
 const Footer = (data: Socials) => {
   return (

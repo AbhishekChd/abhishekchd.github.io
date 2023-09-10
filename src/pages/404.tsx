@@ -1,6 +1,6 @@
 import * as React from "react";
 import { HeadFC, Link, PageProps } from "gatsby";
-import { SEO } from "../components/seo";
+import { SEO } from "../components/components";
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (

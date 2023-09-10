@@ -1,7 +1,7 @@
 import React from "react";
 import * as Icon from "react-feather";
-import SocialLink from "./social-link";
-import { Socials } from "../pages";
+import { SocialLink } from "../components";
+import { Socials } from "../../pages";
 
 const Hero = (data: Socials) => {
   return (
