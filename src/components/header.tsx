@@ -41,9 +41,7 @@ const Header = () => {
           >
             <span className="sr-only">Switch page theme</span>
             <span
-              className={`${
-                isDark ? "translate-x-8" : "translate-x-1"
-              } inline-block h-5 w-5 transform rounded-full bg-white transition`}
+              className={`translate-x-1 dark:translate-x-8 inline-block h-5 w-5 transform rounded-full bg-white transition`}
             />
           </Switch>
           <div className="mx-4">

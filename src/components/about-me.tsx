@@ -56,7 +56,6 @@ const AboutMe = () => {
                 setImageLoaded(false);
               }}
               onLoad={(wasCached) => {
-                console.log(wasCached);
                 setImageLoaded(true);
               }}
             />
