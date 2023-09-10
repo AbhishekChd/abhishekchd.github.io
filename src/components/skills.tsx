@@ -36,7 +36,13 @@ const Skills = () => {
           if (!language.path) return;
           return (
             <span className="text-center" key={value}>
-              <img className="inline rounded" src={language.path} />
+              <img
+                className="inline rounded"
+                height={48}
+                width={48}
+                src={language.path}
+                alt="{language.title}"
+              />
               <br />
               {language.title}
             </span>

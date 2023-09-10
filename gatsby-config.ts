@@ -100,14 +100,13 @@ const config: GatsbyConfig = {
       options: {
         mode: "async",
         enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
+        preconnect: [`https://fonts.gstatic.com`],
+        custom: [
           {
-            name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;500;600;700&display=swap`,
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: ["IBM Plex Sans2"],
+            /* Path to the font CSS file inside the "static" folder with @font-face definition */
+            file: "/fonts/IBMPlexSans.css",
           },
         ],
       },
