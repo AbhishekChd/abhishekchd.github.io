@@ -57,7 +57,13 @@ const Skills = () => {
           if (!tool.path) return;
           return (
             <span className="text-center" key={value}>
-              <img className="inline rounded" src={tool.path} />
+              <img
+                className="inline rounded"
+                src={tool.path}
+                height={48}
+                width={48}
+                alt="{language.title}"
+              />
               <br />
               {tool.title}
             </span>

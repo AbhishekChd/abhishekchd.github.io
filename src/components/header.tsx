@@ -17,9 +17,15 @@ const Header = () => {
       (windowGlobal as Window).localStorage.setItem("theme", "dark");
     } else {
       document.body.classList.remove("dark");
-      (windowGlobal as Window).localStorage.setItem("theme", "light");
+      (windowGlobal as Window).localStorage.removeItem("theme");
     }
   }, [isDark]);
+
+  function isDefaultThemeDark(): boolean {
+    const windowGlobal = typeof window !== "undefined" && window;
+    const savedTheme = (windowGlobal as Window)?.localStorage?.getItem("theme");
+    return savedTheme == "dark";
+  }
 
   return (
     <>
@@ -50,11 +56,3 @@ const Header = () => {
 };
 
 export default Header;
-
-function isDefaultThemeDark(): boolean {
-  const windowGlobalLocal = typeof window !== "undefined" && window;
-  const savedTheme = (windowGlobalLocal as Window)?.localStorage?.getItem(
-    "theme"
-  );
-  return savedTheme ? savedTheme == "dark" : true;
-}
