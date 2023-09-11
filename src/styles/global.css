@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  --color-primary: #6861b8;
+  --color-primary: rgb(104, 97, 184, 1);
+  --color-primary-light: rgb(104, 97, 184, 0.1);
   --color-text: #101010;
   --color-text-muted: #767676;
   --color-background: #faf9f6;
@@ -14,7 +15,8 @@ body {
 }
 
 body.dark {
-  --color-primary: #8984c8;
+  --color-primary: rgb(144, 137, 245, 1);
+  --color-primary-light: rgb(144, 137, 245, 0.1);
   --color-text: #ffffff;
   --color-text-muted: #bbbbbb;
   --color-background: #222831;
@@ -75,7 +77,8 @@ h3 {
   }
 }
 
-h4 {
+h4,
+title {
   font-size: theme(fontSize.base);
   @media (min-width: theme("screens.md")) {
     font-size: theme(fontSize.lg);
@@ -108,6 +111,8 @@ section {
   }
 
   padding: theme("spacing.4");
+  @apply container;
+  margin: auto;
 }
 
 b {
@@ -186,4 +191,10 @@ footer .headline {
     display: inline;
     width: 80%;
   }
+}
+
+.tag-pill {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  letter-spacing: 0.07em;
 }

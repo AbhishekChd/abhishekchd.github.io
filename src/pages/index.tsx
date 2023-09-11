@@ -8,6 +8,7 @@ import {
   Footer,
   ScrollToTop,
   SEO,
+  Projects,
 } from "../components/components";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -25,6 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
       />
       <AboutMe />
       <Work />
+      <Projects />
       <Footer
         email={socials.email}
         github={socials.github}

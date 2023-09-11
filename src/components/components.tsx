@@ -9,6 +9,9 @@ import Skills from "./introduction/skills";
 // Work Section
 import Work from "./work/work";
 
+// Projects Section
+import ProjectsSection from "./projects/projects";
+
 // Footer Section
 import Footer from "./footer/footer";
 
@@ -23,6 +26,7 @@ export {
   AboutMe,
   Skills,
   Work,
+  ProjectsSection as Projects,
   Footer,
   ScrollToTop,
   SocialLink,
