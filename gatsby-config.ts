@@ -111,6 +111,22 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-CB6JJLRWD3"],
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          delayOnRouteUpdate: 0,
+        },
+      },
+    },
   ],
 };
 
