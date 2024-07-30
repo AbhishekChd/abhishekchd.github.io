@@ -3,21 +3,26 @@ import React from "react";
 
 const languages: Skill = new Map([
   ["java", { title: "Java" }],
-  ["cpp", { title: "C++" }],
-  ["python", { title: "Python" }],
-  ["sql", { title: "SQL" }],
+  ["scala", { title: "Scala" }],
+  ["python", { title: "Python" }],  
   ["javascript", { title: "Javascript" }],
   ["typescript", { title: "Typescript" }],
+  ["cpp", { title: "C++" }],
+  ["sql", { title: "SQL" }],
   ["html", { title: "HTML" }],
   ["css", { title: "CSS" }],
 ]);
 
 const tools: Skill = new Map([
   ["spring", { title: "Spring" }],
+  ["akka", { title: "Akka" }],
+  ["kubernets", { title: "Kubernets" }],
+  ["aws", { title: "AWS" }],
+  ["elastic-search", { title: "Elasticsearch" }],
   ["mongodb", { title: "MongoDB" }],
-  ["django", { title: "Django" }],
   ["git", { title: "git" }],
   ["android", { title: "Android" }],
+  ["django", { title: "Django" }],
 ]);
 
 const Skills = () => {
@@ -37,11 +42,9 @@ const Skills = () => {
           return (
             <span className="text-center" key={value}>
               <img
-                className="inline rounded"
-                height={48}
-                width={48}
+                className="inline rounded skill-icon"
                 src={language.path}
-                alt="{language.title}"
+                alt={language.title}
               />
               <br />
               {language.title}
@@ -58,11 +61,9 @@ const Skills = () => {
           return (
             <span className="text-center" key={value}>
               <img
-                className="inline rounded"
+                className="inline rounded skill-icon"
                 src={tool.path}
-                height={48}
-                width={48}
-                alt="{language.title}"
+                alt={tool.title}
               />
               <br />
               {tool.title}

@@ -198,3 +198,8 @@ footer .headline {
   background-color: var(--color-primary-light);
   letter-spacing: 0.07em;
 }
+
+.skill-icon {
+  height: 48px;
+  width: 48px;
+}
