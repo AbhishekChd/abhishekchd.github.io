@@ -6,7 +6,7 @@
 ```
 I'm a Software Engineer with a curiosity to always try on new technology and build some awesome UI/UX!
 
-I have 3+ years of professional experience, and have been a developer for over 6 years!!!
+I have 5 years of professional experience, and have been a developer for over 8 years!!!
 ```
 
 <br/>

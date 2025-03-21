@@ -2,11 +2,11 @@
 type: introduction
 ---
 
-As a **Software Engineer** I love to build **scalable** solutions to ambiguous and challenging problems. I have **3 years of professional SDE Experience** where my last stint was @Amazon where we designed and launched multiple features!
+I’m a **Software Engineer** who loves solving **scalable**, **high-performance** challenges. With **5 years of experience**, I’ve built and launched impactful features—most recently at Jupiter and Amazon optimizing systems and **saving millions 💵**
 
 <br/>
 
-I began my journey as a **developer more than 7 years ago** and still look out to learn new tech with same curiosity and build some awesome **UI/UX**!
+Started my journey **8+ years ago**, and the curiosity hasn’t faded. Whether it’s backend, distributed systems, or a sleek UI, I’m always up for building something awesome! 🚀
 
 <br/>
 <br/>
