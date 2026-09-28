@@ -1,12 +1,12 @@
 <h2 align="center">👋 Hey there! I'm Abhishek Chaudhary</h2>
 
-<div align="c`enter"><code> <a href="https://abhishekchaudhary.dev/" target="_blank">abhishekchaudhary.dev</a> </code></div>
+<div align="center"><code> <a href="https://abhishekchaudhary.dev/" target="_blank">abhishekchaudhary.dev</a> </code></div>
 <br/>
 
 ```
 I'm a Software Engineer with a curiosity to always try on new technology and build some awesome UI/UX!
 
-I have 3+ years of professional experience, and have been a developer for over 6 years!!!
+I have 6+ years of professional experience, and have been a developer for over 8 years!!!
 ```
 
 <br/>

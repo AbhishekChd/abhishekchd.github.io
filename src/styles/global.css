@@ -204,6 +204,21 @@ footer .headline {
   width: 48px;
 }
 
+/* Theme contrast adjustments for specific icons */
+body.dark .skill-icon[alt="Kafka"] {
+  filter: invert(1);
+}
+
+
+/* Dual-theme icon support (light / dark mode files) */
+body.dark .skill-icon-light {
+  display: none !important;
+}
+
+body:not(.dark) .skill-icon-dark {
+  display: none !important;
+}
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);

@@ -80,16 +80,49 @@ const Skills: React.FC = () => {
 
           <div className="flex gap-6 flex-wrap">
             {category.skills.map((skill) => {
-              const iconUrl = iconMap[skill.key];
+              let iconLightUrl = iconMap[skill.key];
+              let iconDarkUrl: string | undefined = undefined;
+
+              if (skill.key === "grpc") {
+                if (iconMap["grpc-dark"] && iconMap["grpc"]) {
+                  iconLightUrl = iconMap["grpc-dark"];
+                  iconDarkUrl = iconMap["grpc"];
+                }
+              } else if (iconMap[`${skill.key}-dark`]) {
+                iconLightUrl = iconMap[skill.key];
+                iconDarkUrl = iconMap[`${skill.key}-dark`];
+              } else if (iconMap[`${skill.key}-light`]) {
+                iconLightUrl = iconMap[`${skill.key}-light`];
+                iconDarkUrl = iconMap[skill.key];
+              }
+
+              const hasDualIcons = Boolean(
+                iconLightUrl && iconDarkUrl && iconLightUrl !== iconDarkUrl
+              );
+              const fallbackIconUrl = iconLightUrl || iconDarkUrl;
+
               return (
                 <span
                   className="text-center flex flex-col items-center min-w-[56px]"
                   key={skill.title}
                 >
-                  {iconUrl ? (
+                  {hasDualIcons ? (
+                    <>
+                      <img
+                        className="inline rounded skill-icon skill-icon-light object-contain"
+                        src={iconLightUrl}
+                        alt={skill.title}
+                      />
+                      <img
+                        className="inline rounded skill-icon skill-icon-dark object-contain"
+                        src={iconDarkUrl}
+                        alt={skill.title}
+                      />
+                    </>
+                  ) : fallbackIconUrl ? (
                     <img
                       className="inline rounded skill-icon object-contain"
-                      src={iconUrl}
+                      src={fallbackIconUrl}
                       alt={skill.title}
                     />
                   ) : (

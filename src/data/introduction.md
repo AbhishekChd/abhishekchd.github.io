@@ -2,7 +2,7 @@
 type: introduction
 ---
 
-I’m a **Software Engineer** with **nearly 6 years of experience** building and scaling **software products**. I’ve worked across **Uber, Jupiter, and Amazon**, solving **scalability, performance, and distributed systems** challenges and delivering measurable impact.
+I’m a **Software Engineer** with **6+ years of experience** building and scaling **software products**. I’ve worked across **Uber, Jupiter, and Amazon**, solving **scalability, performance, and distributed systems** challenges and delivering measurable impact.
 
 <br/>
 
