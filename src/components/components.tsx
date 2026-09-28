@@ -18,6 +18,8 @@ import Footer from "./footer/footer";
 // Utility and core classes
 import ScrollToTop from "./core/scroll-to-top";
 import SocialLink from "./core/social-link";
+import ThumbnailImage from "./core/thumbnail-image";
+import VideoPlayer from "./core/video-player";
 import { SEO } from "./core/seo";
 
 export {
@@ -30,5 +32,8 @@ export {
   Footer,
   ScrollToTop,
   SocialLink,
+  ThumbnailImage,
+  VideoPlayer,
   SEO,
 };
+

@@ -1,8 +1,17 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Switch } from "@headlessui/react";
 import * as Icon from "react-feather";
 
-const Header = () => {
+export interface HeaderProps {
+  actionLeft?: React.ReactNode;
+  backTo?: {
+    to: string;
+    label: string;
+  };
+}
+
+const Header: React.FC<HeaderProps> = ({ actionLeft, backTo }) => {
   const [isDark, setIsDark] = React.useState(isDefaultThemeDark());
   const lightColor = !isDark
     ? "var(--color-primary)"
@@ -27,9 +36,31 @@ const Header = () => {
     return savedTheme == "dark";
   }
 
+  const hasLeftAction = Boolean(actionLeft || backTo);
+
   return (
     <>
-      <nav className="flex h-16 justify-end mt-3">
+      <nav
+        className={`flex h-16 ${
+          hasLeftAction ? "justify-between" : "justify-end"
+        } mt-3`}
+      >
+        {hasLeftAction ? (
+          <div className="flex self-center mx-2 sm:mx-4 lg:mx-10">
+            {backTo ? (
+              <Link
+                to={backTo.to}
+                className="inline-flex items-center text-base sm:text-lg font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors group gap-3.5"
+              >
+                <Icon.ArrowLeft className="w-5 h-5 transition-transform duration-200 group-hover:-translate-x-1" />
+                <span>{backTo.label}</span>
+              </Link>
+            ) : (
+              actionLeft
+            )}
+          </div>
+        ) : null}
+
         <div className="flex self-center mx-2 sm:mx-4 lg:mx-10 align-middle">
           <div className="mx-4">
             <Icon.Sun size={29} color={lightColor} fill={lightColor} />

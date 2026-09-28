@@ -7,8 +7,11 @@ type ProjectNode = {
   frontmatter: {
     title: string;
     url: string;
+    description?: string;
     tags: string[];
     featuredImage: string;
+    isPrivate?: boolean;
+    badge?: string;
   };
 };
 
@@ -25,9 +28,11 @@ const ProjectsSection = () => {
       const project: ProjectItem = {
         title: node.frontmatter.title,
         url: node.frontmatter.url,
-        description: node.html,
+        description: node.frontmatter.description || node.html,
         image: `/images/projects/${node.frontmatter.featuredImage}`,
         tags: node.frontmatter.tags,
+        isPrivate: node.frontmatter.isPrivate,
+        badge: node.frontmatter.badge,
       };
       return project;
     }
@@ -35,7 +40,7 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <section className="min-h-screen">
+      <section className="min-h-screen" id="projects">
         <h2 className="mb-6 md:mb-12 lg:mb-16">🚀 Projects</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16">
@@ -48,6 +53,8 @@ const ProjectsSection = () => {
                 description={project.description}
                 image={project.image}
                 tags={project.tags}
+                isPrivate={project.isPrivate}
+                badge={project.badge}
               />
             );
           })}
@@ -69,8 +76,11 @@ const query = graphql`
         frontmatter {
           title
           url
+          description
           tags
           featuredImage
+          isPrivate
+          badge
         }
         html
       }

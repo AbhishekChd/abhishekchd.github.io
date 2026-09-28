@@ -14,7 +14,7 @@ const Hero = (data: Socials) => {
           I'm <b>Abhishek Chaudhary.</b>
           <br />
           <span className="header-accent">
-            I design & build scalable systems.
+            I design & build scalable software.
           </span>
         </h1>
         <div className="space-y-28">
