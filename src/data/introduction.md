@@ -9,6 +9,3 @@ I’m a **Software Engineer** with **nearly 6 years of experience** building and
 I enjoy tackling challenging engineering problems—from **large-scale platform migrations** and **system architecture** to performance optimization and building products end-to-end. 🚀
 
 <br/>
-<br/>
-
-Here are some of my skills ⚡️
