@@ -2,7 +2,7 @@
 title: "Software Development Engineer 2"
 company: "Jupiter"
 start: "Sep 2023"
-end: "Present"
+end: "May 2025"
 location: Bengaluru, India
 date: "2023-09-21T00:00:00.000Z"
 show: true

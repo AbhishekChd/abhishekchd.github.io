@@ -1,6 +1,5 @@
 import React from "react";
 import Pill from "./pill";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 const Project = (project: Project) => {
   return (
@@ -11,10 +10,10 @@ const Project = (project: Project) => {
           href={project.url}
           target="_blank"
         >
-          <GatsbyImage
+          <img
             className="transition-all rounded m-2 border-2 border-gray-500 border-opacity-20 group-hover:border-opacity-30 group-hover:border-4"
             style={{ maxWidth: "150px", minWidth: "150px" }}
-            image={project.image}
+            src={project.image}
             alt={`${project.title} project image`}
           />
           <div className="ml-4 flex mt-4 md:mt-0 flex-col h-full justify-between">
@@ -52,10 +51,13 @@ const Project = (project: Project) => {
 
 export default Project;
 
-type Project = {
+export type ProjectItem = {
   title: string;
   url: string;
   description: string;
   tags: string[];
-  image: IGatsbyImageData;
+  image: string;
 };
+
+export type Project = ProjectItem;
+

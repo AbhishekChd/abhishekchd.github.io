@@ -2,11 +2,11 @@
 type: introduction
 ---
 
-I’m a **Software Engineer** who loves solving **scalable**, **high-performance** challenges. With **5 years of experience**, I’ve built and launched impactful features—most recently at Jupiter and Amazon optimizing systems and **saving millions 💵**
+I’m a **Software Engineer** with **nearly 6 years of experience** building and scaling **software products**. I’ve worked across **Uber, Jupiter, and Amazon**, solving **scalability, performance, and distributed systems** challenges and delivering measurable impact.
 
 <br/>
 
-Started my journey **8+ years ago**, and the curiosity hasn’t faded. Whether it’s backend, distributed systems, or a sleek UI, I’m always up for building something awesome! 🚀
+I enjoy tackling challenging engineering problems—from **large-scale platform migrations** and **system architecture** to performance optimization and building products end-to-end. 🚀
 
 <br/>
 <br/>

@@ -4,7 +4,7 @@ import React from "react";
 const languages: Skill = new Map([
   ["java", { title: "Java" }],
   ["scala", { title: "Scala" }],
-  ["python", { title: "Python" }],  
+  ["python", { title: "Python" }],
   ["javascript", { title: "Javascript" }],
   ["typescript", { title: "Typescript" }],
   ["cpp", { title: "C++" }],
@@ -29,11 +29,11 @@ const Skills = () => {
   const assetsResponse = useStaticQuery(allSvgAsssetsQuery);
   const nodes: { node: Node }[] = assetsResponse.assets.edges;
 
+  getPaths(languages, nodes);
+  getPaths(tools, nodes);
+
   return (
     <>
-      {getPaths(languages, nodes)}
-      {getPaths(tools, nodes)}
-
       <title className="mt-6 mb-2">Languages</title>
       <div className="flex gap-6 flex-wrap">
         {Array.from(languages).map((key, value) => {
