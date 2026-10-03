@@ -2,6 +2,7 @@ import React from "react";
 import * as Icon from "react-feather";
 import { SocialLink } from "../components";
 import { Socials } from "../../pages";
+import { trackEvent } from "../../utils/analytics";
 
 const Hero = (data: Socials) => {
   return (
@@ -21,7 +22,7 @@ const Hero = (data: Socials) => {
           <h3>
             Get in touch 👉 <span className="m-3"></span>
             <span className="hero-email-link">
-              <a href={data.email.url} target="_blank">
+              <a href={data.email.url} target="_blank" onClick={() => trackEvent("click", "Hero", "Email")}>
                 {data.email.username}
               </a>
             </span>
@@ -33,6 +34,7 @@ const Hero = (data: Socials) => {
               url={data.github.url}
               linkClasses="flex gap-1"
               icon={<Icon.GitHub className="social-icon" />}
+              onClick={() => trackEvent("click", "Hero", "GitHub")}
             />
 
             <span className="m-3">/</span>
@@ -48,6 +50,7 @@ const Hero = (data: Socials) => {
                   className="social-icon"
                 />
               }
+              onClick={() => trackEvent("click", "Hero", "LinkedIn")}
             />
 
             <span className="m-3">/</span>
@@ -57,6 +60,7 @@ const Hero = (data: Socials) => {
               url={data.resume.url}
               linkClasses="flex gap-1"
               icon={<Icon.DownloadCloud className="social-icon" />}
+              onClick={() => trackEvent("click", "Hero", "Resume")}
             />
           </h4>
         </div>

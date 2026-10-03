@@ -111,20 +111,26 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
+    { 
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ["G-CB6JJLRWD3"],
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
         pluginConfig: {
-          head: false,
+          head: true,
           respectDNT: true,
           delayOnRouteUpdate: 0,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        clarity_project_id: 'yruzyhp72p',
+        enable_on_dev_env: true,
       },
     },
   ],

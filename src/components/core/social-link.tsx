@@ -6,7 +6,7 @@ const SocialLink = (data: SocialLinkData) => {
   return (
     <>
       <div className="social-link">
-        <a href={data.url} target="_blank" className={data.linkClasses}>
+        <a href={data.url} target="_blank" className={data.linkClasses} onClick={data.onClick}>
           {hasIcon ? (
             <span className={data.iconSpanClasses}>{icon}</span>
           ) : (
@@ -27,4 +27,5 @@ export type SocialLinkData = {
   linkClasses?: string;
   iconSpanClasses?: string;
   icon?: ReactNode;
+  onClick?: () => void;
 };
